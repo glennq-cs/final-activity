@@ -1,0 +1,20 @@
+<div class="container mt-5">
+    <div class="row" *ngIf="ticket">
+        <h1 class="mb-5">{{ title }}</h1>
+        <div class="col-md-12 border-top border-bottom py-3">
+            <h3><strong>[{{ ticket.template.alias }}]
+                {{ ticket.template.name }} <br />
+                <small>#{{ ticket.serial }}</small></strong>
+            </h3>
+        </div>
+        <div class="col-md-12 border-bottom p-3">
+            Submitted at: {{ ticket.created_at | date: 'd-MMM-yyyy' }}
+        </div>
+        <div class="col-md-12 p-3">
+            Priority: {{ ticket.priority }} <br />
+            Status: {{ ticket.status }} <br />
+            Assignee: {{ ticket.assignee?ticket.assignee:'Unassigned' }} <br />
+        </div>
+    </div>
+    <a class="btn btn-dark" [routerLink]="['/tickets']">Back</a>
+</div>

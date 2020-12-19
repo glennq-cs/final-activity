@@ -1,0 +1,28 @@
+<div class="container my-5">
+    <div class="row">
+        <div class="col-12">
+            <img class="rounded-circle mx-auto d-block" 
+            alt="100x100" 
+            width="170"
+            src="{{ profile.alias }}"
+          data-holder-rendered="true">
+          <a href="/profile" class="btn btn-info btn-block mt-5">Edit Profile</a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <div class="profile_info p-3">
+                <strong>Name:</strong><br />
+                {{ profile.name }}
+            </div>
+            <div class="profile_info p-3">
+                <strong>Job Title:</strong><br />
+                {{ profile.job_title }}
+            </div>
+            <div class="profile_info p-3">
+                <strong>Mobile No.:</strong><br />
+                {{ profile.mobile_number }}
+            </div>
+        </div>
+    </div>
+</div>

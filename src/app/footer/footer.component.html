@@ -1,0 +1,20 @@
+<div class="footer container">
+    <nav class="navbar navbar-light">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" >Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/tickets"  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Tickets</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/about-us" routerLinkActive="active" >About Us</a>
+            </li>
+            <li *ngIf="!isLogged" class="nav-item">
+                <a class="nav-link" routerLink="/logged-in" routerLinkActive="active" >Login</a>
+            </li>
+          </ul>
+    </nav>
+    <!-- <app-nav></app-nav> -->
+</div>
+
