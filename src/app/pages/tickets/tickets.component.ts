@@ -24,6 +24,8 @@ export class TicketsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this._globalService.setPageTitle('Tickets');
+
     this.tRecords = 0;
     this.isLogged = this._globalService.getLogStatus();
 

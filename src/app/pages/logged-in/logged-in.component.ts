@@ -33,6 +33,8 @@ export class LoggedInComponent implements OnInit {
 
     this.isLogged = this._globalService.getLogStatus();
 
+    this._globalService.setPageTitle('Login');
+
     if(this.isLogged) {
       this.router.navigate(['/']);
     }

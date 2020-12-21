@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'My Ticket';
+  title = 'My Tickets';
 
   isLogged: any;
 
@@ -18,12 +18,12 @@ export class AppComponent {
     ) { }
 
   ngOnInit(): void {
-    // this._store.subscribe((status: any) => {
-    //     this.isLogged = status.auth.logged;
-    //     if(status.auth.logged === false) {
-    //       this.router.navigate(['/logged-in']);  
-    //     }
-    //   }
-    // );
+    this._store.subscribe((status: any) => {
+        this.isLogged = status.auth.logged;
+        if(status.auth.logged === false) {
+          this.router.navigate(['/logged-in']);  
+        }
+      }
+    );
   }
 }

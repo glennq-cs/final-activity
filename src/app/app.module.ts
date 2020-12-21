@@ -24,6 +24,7 @@ import { TicketsState } from '../app/states/tickets.state';
 import { NgxsModule } from '@ngxs/store';
 import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 import { TicketInfoComponent } from './pages/ticket-info/ticket-info.component';
+import { OneColumnComponent } from './one-column/one-column.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TicketInfoComponent } from './pages/ticket-info/ticket-info.component';
     ProfileComponent,
     SidebarComponent,
     TwoColumnComponent,
-    TicketInfoComponent
+    TicketInfoComponent,
+    OneColumnComponent
   ],
   imports: [
     BrowserModule,

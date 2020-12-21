@@ -8,6 +8,7 @@ import { TicketInfoComponent } from './pages/ticket-info/ticket-info.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { LoggedInComponent } from './pages/logged-in/logged-in.component';
 import { TwoColumnComponent } from './two-column/two-column.component';
+import { OneColumnComponent } from './one-column/one-column.component';
 
 const routes: Routes = [
   { path: '', component: TwoColumnComponent, children: [
@@ -16,9 +17,12 @@ const routes: Routes = [
     { path: 'tickets', component: TicketsComponent },
     { path: 'ticket-info/:id', component: TicketInfoComponent },
   ] },
-  { path: 'about-us', component: AboutUsComponent },
-  { path: 'logged-in', component: LoggedInComponent },
-  { path: '**', component: NotFoundComponent },
+  { path: '', component: OneColumnComponent, children: [
+    { path: 'about-us', component: AboutUsComponent },
+  {   path: 'logged-in', component: LoggedInComponent },
+    { path: '**', component: NotFoundComponent }
+  ] }
+  
 ];
 
 @NgModule({
